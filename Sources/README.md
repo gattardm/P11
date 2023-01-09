@@ -1,7 +1,6 @@
-test
 # P11
 ## Semaine 1 du 02/01 au 07/06
-**entretien tuteur 03/01/2023**
+###entretien tuteur 03/01/2023
 **A faire pour le 09/01**
 + :+1: ~~Compléter le tableau de sourcing avec les PJ anglaises du repo~~
 + :+1: ~~Définir les objectifs du projets~~
@@ -10,6 +9,7 @@ test
 	- :-1: Dans le SAW, renseigner le Plan et calendrier du projet d'architecture (à faire après avoir développé la solution)
 + :point_right: Définir la stratégie de tests
 
+###travail personnel
 **Questions**
 + :point_right: S'agit-il de délivrer une plateforme qui regroupera l'ensemble des plateformes des organisations membres du Consortium ou s'agit-il de développer un support de plateforme dont les autres membres du Consortium se serviront pour migrer leur plateforme existante vers un résultat de plateforme homogène et prévilégiant l'interopérabilité entre les plateformes migrées?
 	- réponse : DDA *"Un consortium de quatre sociétés de premier plan s'est réuni pour consolider les efforts, les données, les applications et les feuilles de route de chacune afin de développer une plateforme de nouvelle génération centrée sur le patient et capable d'améliorer les soins de base proposés - tout en étant réactive, opérationnelle en temps réel et capable de prendre des décisions dans les situations d'urgence, en prenant en compte l’ensemble des données."*
