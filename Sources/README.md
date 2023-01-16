@@ -7,10 +7,11 @@
 + Dans le SAW
 	- :-1: renseigner les Critères d'acceptation (à faire après avoir développé la solution)
 	- :-1: renseigner le Plan et calendrier du projet d'architecture (à faire après avoir développé la solution)
-	- :-1: faire la description d'impact du nouveau système
-	- :-1: indiquer que le patient puisse déclencher le système d'intervention d'urgence
+	- :-1: ~~faire la description d'impact du nouveau système~~
+	  - réponse de Faouzi (mail du 12/01/2023 à 14:04) : "*L'impact à considérer : dsl si j'ai mal formulé les choses mais l'idée  était d'utiliser ton travail sur le SAW pour évaluer l'impact de l'étude qui sera développé dans le document des spécifications des conditions  requises entre autres.*"
+	- :+1: indiquer que le patient puisse déclencher le système d'intervention d'urgence
 	- :+1: présenter les fiches d'intervention d'urgence dans le SAW
-	- :-1: Compléter les principes d'architecture proposés dans la PJ
+	- :+1: Compléter les principes d'architecture proposés dans la PJ
 	- :+1: Présenter les risques accocièes à la solution (l'introduction d'un ERM est déjà spécifiée dans le §Sécurité)
 
 **Questions**
