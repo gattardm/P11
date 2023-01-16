@@ -17,6 +17,8 @@
 **Questions**
 
 **Remarques**
+	- :point_right: il est spécifié dans les attendus "La documentation de l’architecture pour les livrables finaux est conforme à cette exigence lorsque : L'énoncé des travaux d'architecture définit des métriques et des KPI pour mesurer le succès de la PoC."
+		-il est nullement mention de KPI ou de quelconque métrique contenus dans le SAW au sein du TOGAF.
 
 **Architecture**
 + :+1: durant le projet, des risques peuvent apparaitre, relativement aux domaines:
