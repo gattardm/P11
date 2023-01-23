@@ -8,11 +8,13 @@
 
 #### A faire pour le 24/01
 
-:point_right:  **rédiger le plan de tests comprenant:**
+:+1:  **rédiger le plan de tests comprenant:**
 
-​		:-1: la stratégie de tests;
+​		:+1: la stratégie de tests;
 
-​		:-1: l'hypothèse de validation de principe avec méthodologie et résultats.
+​		:fist: l'hypothèse de validation de principe avec méthodologie et résultats
+
+​				:point_right:Faire confirmer à Faouzi que l'hypothèse de validation de principe avec méthodologie et résultats est bien définie dans mon Plan de Tests .
 
 #### A faire avant la fin du projet
 
@@ -30,17 +32,23 @@
 - la couverture des tests sur une PoC;
 - le descriptif de la configuration du pipeline CI/CD.
 
-:point_right: Faouzi va poser la question à OC pour savoir jusqu'à quand, après ma formation, j'aurai accès aux ressources d'OC?
+:raised_hand: Faouzi va poser la question à OC pour savoir jusqu'à quand, après ma formation, j'aurai accès aux ressources d'OC?
+
+- ​	réponse : oui tout le temps (mail d'OpenClassroom du 18/01/2023 à 16:39)
 
 #### Remarques
 
 :point_right: il est spécifié dans les attendus "La documentation de l’architecture pour les livrables finaux est conforme à cette exigence lorsque : L'énoncé des travaux d'architecture définit des métriques et des KPI pour mesurer le succès de la PoC."
 
 - il est nullement mention de KPI ou de quelconque métrique contenus dans le SAW au sein du TOGAF.
+- je produirai quand même des KPI car ceux-ci font parti du modèle fourni par MedHead, Alors même si TOGAF ne le demande pas dans un SAW, osef c'est le client qui a le chéquier pas TOGAF...
 
 :point_right: Faouzi va informer OC  qu'il n'y ait pas de KPI ou de métrique définis dans le SAW, selon TOGAF.
 
 ### Travail personnel
+
+#### A FAire
+:+1: Mettre à jour la liste du paragraphe Objectifs, composants et domaines à l'issue du listing des campagnes et des scénarii
 
 #### Architecture
 
