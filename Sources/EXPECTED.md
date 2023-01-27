@@ -7,7 +7,7 @@
 
 **Dans la partie 2**, il est question des exigences relatives à :
 
-- [ ] le plan de test;
+- [x] le plan de test;
 - [x] l'énonce des travaux d'architecture;
 - [x] le document des principes d'architecture;
 - [ ] un document décrivant toute la configuration des pipelines CI/CD utilisé et/ou à utiliser.

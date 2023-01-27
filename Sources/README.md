@@ -2,6 +2,54 @@
 #                                                            P11
 **===========================================================================================================================**
 
+## Semaine 4 du 23/01 au 27/01
+
+### entretien tuteur 17/01/2023
+
+#### A faire pour le 31/01
+
+Réaliser la configuration du pipeline CI/CD (Jenkins, IntelliJ IDEA, JAVA J2SE, JUnit, javadoc, outils de surcharge).
+
+#### A faire avant la fin du projet
+
+**:point_right: Dans le SAW :**
+
+​		:-1: renseigner le *§Critères d'acceptation* (à faire après avoir développé la solution);
+
+​		:-1: renseigner le *§Plan et calendrier* du projet d'architecture (à faire après avoir développé la solution).
+
+​		:-1: produire/renseigner les KPI et métrique tel que demandé dans le modèle de SAW fourni en intrant.
+
+​		:-1: transformer l'exemple en XML de formattage des messages en JSON.
+
+:point_right:**Dans le Plan de tests :**
+
+​		:-1: renseigner le *§Ressources* à fournir pour réaliser la PoC.
+
+​		:-1: Prévoir le Tests de sauvegarde dans un cadre de save/restore de données.
+
+#### Questions
+
+
+
+#### Remarques
+
+:point_right:Faire remonter l'absence des règles de gestion
+
+
+
+### Travail personnel
+
+#### A Faire
+
+
+
+#### Architecture
+
+
+
+**===========================================================================================================================**
+
 ## Semaine 3 du 16/01 au 20/01
 
 ### entretien tuteur 17/01/2023
@@ -20,9 +68,15 @@
 
 **:point_right: Dans le SAW :**
 
-​		:-1: renseigner les Critères d'acceptation (à faire après avoir développé la solution);
+​		:-1: renseigner le *§Critères d'acceptation* (à faire après avoir développé la solution);
 
-​		:-1: renseigner le Plan et calendrier du projet d'architecture (à faire après avoir développé la solution).
+​		:-1: renseigner le *§Plan et calendrier* du projet d'architecture (à faire après avoir développé la solution).
+
+​		:-1: produire/renseigner les KPI et métrique tel que demandé dans le modèle de SAW fourni en intrant.
+
+:point_right:**Dans le Plan de tests :**
+
+​		:-1: renseigner le *§Ressources* à fournir pour réaliser la PoC.
 
 #### Questions
 
@@ -31,10 +85,11 @@
 - la profondeur de rédaction du plan de tests (jusqu'où dois-je les prévoir?);
 - la couverture des tests sur une PoC;
 - le descriptif de la configuration du pipeline CI/CD.
+- réponse d'OC : OC n'a donné pas de détail vis à vis du calcul du chiffrage temporel. Il s'agit d'une moyenne relative à la réalisation du P11 par les élèves l'ayant déjà fini.
 
-:raised_hand: Faouzi va poser la question à OC pour savoir jusqu'à quand, après ma formation, j'aurai accès aux ressources d'OC?
+:+1: Faouzi va poser la question à OC pour savoir jusqu'à quand, après ma formation, j'aurai accès aux ressources d'OC?
 
-- ​	réponse : oui tout le temps (mail d'OpenClassroom du 18/01/2023 à 16:39)
+- réponse : oui tout le temps (mail d'OpenClassroom du 18/01/2023 à 16:39)
 
 #### Remarques
 
@@ -47,7 +102,7 @@
 
 ### Travail personnel
 
-#### A FAire
+#### A Faire
 :+1: Mettre à jour la liste du paragraphe Objectifs, composants et domaines à l'issue du listing des campagnes et des scénarii
 
 #### Architecture
