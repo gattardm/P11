@@ -40,8 +40,25 @@ Réaliser la configuration du pipeline CI/CD (Jenkins, IntelliJ IDEA, JAVA J2SE,
 
 ### Travail personnel
 
-#### A Faire
 
+#### A Faire
+:+1:Install JDK19
+:+1:Configure variable d'environnement (JAVA_HOME et JRE_HOME)
+:+1:Install Jenkins
+:+1:Configure Jenkins
+:+1:Install Maven
+:+1:Declare Maven in Jenkins
+:+1:Install IDE (IntellIJ IDEA)
+:+1:Configure IntellIJ with GitHub/Jenkins
+~~:+1:Install Docker with Docker Desktop~~
+
+:+1:install Docker (pas besoin de Docker Desktop, je suis déjà sous Linux - -' )
+
+:-1:Configure Jenkins with Docker
+	problème de token d'authentification dans Docker:
+		"Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post...
+		Build step 'Docker Build and Publish' marked build as failure
+		Finished: FAILURE"
 
 
 #### Architecture
