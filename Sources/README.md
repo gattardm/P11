@@ -1,6 +1,168 @@
 **===========================================================================================================================**
 #                                                            P11
-**===========================================================================================================================**Semaine 4 du 23/01 au 27/01
+**===========================================================================================================================**
+
+Semaine 4 du 23/01 au 27/01
+
+### Semaine 9 du 27/02 au 03/02
+
+### entretien tuteur 02/03/2023
+
+#### A faire pour le 07/03
+
+:point_right:**Dans le Plan de tests :**
+
+​		:-1: renseigner le *§Ressources* à fournir pour réaliser la PoC.
+
+#### A faire avant la fin du projet
+
+**:point_right: Dans le SAW :**
+
+​		:-1: renseigner le *§Critères d'acceptation* (à faire après avoir développé la solution);
+
+​		:-1: renseigner le *§Plan et calendrier* du projet d'architecture (à faire après avoir développé la solution).
+
+​		:-1: produire/renseigner les KPI et métrique tel que demandé dans le modèle de SAW fourni en intrant.
+
+​		:-1: transformer l'exemple en XML de formattage des messages en JSON.
+
+:point_right:**Dans le Plan de tests :**
+
+​		:-1: renseigner le *§Ressources* à fournir pour réaliser la PoC.
+
+​		:-1: Prévoir le Tests de sauvegarde dans un cadre de save/restore de données.
+
+#### Questions
+
+
+
+#### Remarques
+
+:point_right:Faire remonter l'absence des règles de gestion
+
+
+
+### Travail personnel
+
+
+#### A Faire
+
+:+1:Install JDK19
+:+1:Configure variable d'environnement (JAVA_HOME et JRE_HOME)
+:+1:Install Jenkins
+:+1:Configure Jenkins
+:+1:Install Maven
+:+1:Declare Maven in Jenkins
+:+1:Install IDE (IntellIJ IDEA)
+:+1:Configure IntellIJ with GitHub/Jenkins
+~~:+1:Install Docker with Docker Desktop~~
+
+:+1:install Docker (pas besoin de Docker Desktop, je suis déjà sous Linux - -' )
+
+:+1:Configure Jenkins with Docker
+
+:-1: Publier l'image Docker sur DockerHub
+
+```
+docker push solarhis/emergency-system
+```
+
+```
+denied: requested access to the resource is denied
+Build step 'Docker Build and Publish' marked build as failure
+Finished: FAILURE
+```
+
+#### Architecture
+
+**identification des fonctionnalités de l'API:**
+
+1. Un point d'entrée (témoin de l'incident, secours ou victime) fait un appel d'urgence.
+   1. le journal d'appel d'urgence est complété.
+2. l'appel d'urgence est reçu et ACK.
+3. les informations contenues dans le message sont prises en compte (par un opérateur):
+   1. les secours sont appelés en parallèle;
+   2. les ressources médicales adaptées au type de l'incident sont identifiées;
+      1. un hôpital approprié est localisé et identifié;
+      2. un lit dans cet hôpital est réservé.
+   3. les ressources identifiées sont réservées "en urgence" (réquisitionnées);
+   4. le tableau de service et le planning sont mis à jour.
+4. le dossier de l'appel d'urgence est envoyé aux équipes médicales identifiées:
+   1. si la victime est "déjà" connue, son historique médical est récupéré et envoyé aux équipes médicales;
+   2. l'identité médicale du patient est envoyée aux équipes médicales.
+5. les équipes médicales préparent les solutions médicales au vu des dommages de la victime.
+6. la victime est admise et traitée.
+
+**identification des ressources : opération CRUD**
+
+- victime : C
+  - POST /persons
+  - GET /persons/{person_id}
+
+- système expert d'urgence -> journal d'urgence : RU
+  - PUT /emergencyLog
+
+- hôpital : R
+- lit : RU
+- équipes médicales / spécialités médicales : R
+- dossier du patient : CRU
+
+**Type d'API : PRIVE**
+
+**API SpringBoot :**
+
+- Avantages:
+  - optimisation de la gestion des dépendances
+  - autoconfiguration
+  - gestion des propriété&s
+  - monitoring et gestion du programme
+  - déploiement
+- composants :
+  - Spring Boot : autoconfiguration, startes de dépenadnce, et endpoins Actuator pour les données sur l'appli
+  - Spring Core -> core container comprenant Spring MVC et d'autres composants nécessaires pour la communication avec la BDD notamment...
+  - Spring DATA
+  - Spring Security : authentifaction
+  - Spring Cloud : pour l'archi MSA
+
+utilisation de Spring Initialzr (https://start.spring.io/)
+
+#### Théorie
+
+- **REST**
+  - Client-Serveur separation
+  - Stateless
+  - Cacheable
+  - Uniform interface
+  - Layered system
+  - Code on demand
+
+- **HTTP : CRUD**
+  - POST : Create
+  - GET : Read
+  - PUT : Update
+  - DELETE : Delete
+- **Structure d'une requête**
+  - Verbe HTTP + URI + Version HTTP + Headers+ Body (optionnal)
+
+- **Réponse d'une requête**
+  - Version HTTP + Code HTTP + Headers + Body
+
+- **Erreurs**
+  - 100+ : infos
+  - 200+ : success
+  - 300+ : redirection
+  - 400+ : erreur client
+  - 500+ : erreur serveur
+- **Filtres**
+  - ex: GET /photos?location= {location_id}
+- **Tri**
+  - ex GET /users/{user_ID}/followers?sort=lastName&order=asc
+  - GET /users?verified=true&firstName=Jamie
+  - GET /photos?location=NYC&created_at=2018-12-31&likes_greater_than=5000
+
+**===========================================================================================================================**
+
+### Semaine 4 du 23/01 au 27/01
 
 ### entretien tuteur 09/02/2023
 
