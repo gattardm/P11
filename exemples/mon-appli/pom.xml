@@ -1,0 +1,139 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- ===================================================================== -->
+  <!-- Informations du projet -->
+  <!-- ===================================================================== -->
+
+  <!-- ===== Informations Maven ===== -->
+  <groupId>org.exemple.demo</groupId>
+  <artifactId>mon-appli</artifactId>
+  <version>1.2-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <!-- ===== Informations générales ===== -->
+  <name>mon-appli</name>
+  <description>
+    La super application qui sert à faire ceci/cela...
+  </description>
+  <url>http://www.exemple.org/mon-appli</url>
+
+  <!-- ===== Organisation ===== -->
+  <organization>
+    <name>Mon entreprise</name>
+    <url>http://wwww.exemple.org</url>
+  </organization>
+
+  <!-- ===== Licences ===== -->
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licences/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <!-- ===== Développeurs ===== -->
+  <developers>
+    <developer>
+      <name>ma pomme</name>
+    </developer>
+  </developers>
+
+  <!-- ===== Contributeurs ===== -->
+  <contributors>
+    <contributor>
+      <name>encore moi</name>
+    </contributor>
+  </contributors>
+
+  <!-- ===================================================================== -->
+  <!-- ===== Propriétés ===== -->
+  <!-- ===================================================================== -->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <apache.struts.version>2.5.10.1</apache.struts.version>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <!-- ===== Apache Struts ===== -->
+    <dependency>
+      <groupId>org.apache.struts</groupId>
+      <artifactId>struts2-core</artifactId>
+      <version>${apache.struts.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.struts</groupId>
+      <artifactId>struts2-json-plugin</artifactId>
+      <version>${apache.struts.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <!-- ===================================================================== -->
+  <!-- ===== Profils ===== -->
+  <!-- ===================================================================== -->
+  <profiles>
+    <profile>
+      <id>test</id>
+      <build>
+        <resources>
+          <resource>
+            <directory>src/main/resources/conf-test</directory>
+            <filtering>true</filtering>
+          </resource>
+        </resources>
+      </build>
+    </profile>
+    <profile>
+      <id>prod</id>
+      <build>
+        <resources>
+          <resource>
+            <directory>src/main/resources/conf-prod</directory>
+            <filtering>true</filtering>
+          </resource>
+        </resources>
+      </build>
+    </profile>
+  </profiles>
+
+  <!-- ===================================================================== -->
+  <!-- ===== Build ===== -->
+  <!-- ===================================================================== -->
+  <build>
+    <!-- Gestion des plugins -->
+    <pluginManagement>
+      <plugins>
+        <!-- Plugin responsalbe de la génération du fichier JAR -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.3.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <!-- création du Manifest pour la définition de la classe -->
+            <manifest>
+              <mainClass>org.exemple.demo.App</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

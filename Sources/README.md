@@ -2,17 +2,31 @@
 #                                                            P11
 **===========================================================================================================================**
 
-Semaine 4 du 23/01 au 27/01
-
 ### Semaine 9 du 27/02 au 03/02
 
 ### entretien tuteur 02/03/2023
+
+#### Travaux réalisés
+
+:+1:**Dans le Plan de tests :**
+
+​		:+1: renseigner le *§Ressources* à fournir pour réaliser la PoC.
+
+​				:+1:Pipeline CI/CD
+
+​				:+1: Conceptualisation architecturale de la structure de l'application de la PoC --> initialisation du document *SBB_application-POC*				
+
+:+1:**Rédaction de la SBB de pipeline CI/CD**
 
 #### A faire pour le 07/03
 
 :point_right:**Dans le Plan de tests :**
 
-​		:-1: renseigner le *§Ressources* à fournir pour réaliser la PoC.
+​		:point_right: renseigner le *§Ressources* à fournir pour réaliser la PoC.
+
+​				:+1:Pipeline CI/CD
+
+​				:-1: Structure de l'application de la PoC
 
 #### A faire avant la fin du projet
 
@@ -38,8 +52,6 @@ Semaine 4 du 23/01 au 27/01
 
 #### Remarques
 
-:point_right:Faire remonter l'absence des règles de gestion
-
 
 
 ### Travail personnel
@@ -55,9 +67,6 @@ Semaine 4 du 23/01 au 27/01
 :+1:Declare Maven in Jenkins
 :+1:Install IDE (IntellIJ IDEA)
 :+1:Configure IntellIJ with GitHub/Jenkins
-~~:+1:Install Docker with Docker Desktop~~
-
-:+1:install Docker (pas besoin de Docker Desktop, je suis déjà sous Linux - -' )
 
 :+1:Configure Jenkins with Docker
 
@@ -72,6 +81,8 @@ denied: requested access to the resource is denied
 Build step 'Docker Build and Publish' marked build as failure
 Finished: FAILURE
 ```
+
+:point_right:Il a été décidé en accord avec Faouzi de laisser le goal Publish > DockerHub de côté.
 
 #### Architecture
 

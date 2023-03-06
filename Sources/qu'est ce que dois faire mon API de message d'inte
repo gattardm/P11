@@ -1,0 +1,17 @@
+qu'est ce que dois faire mon API de message d'intervention:
+1_Un point d'entrée (témoin de l'incident, secours ou victime) fait un appel d'urgence.
+1-1_le journal d'appel d'urgence est complété.
+2_l'appel d'urgence est reçu et ACK.
+3_les informations contenues dans le message sont prises en compte (par un opérateur):
+3-1_les secours sont appelés en parallèle;
+3-2_les ressources médicales adaptées au type de l'incident sont identifiées;
+3-2-1_un hôpital approprié est localisé et identifié;
+3-2-2_un lit dans cet hôpital est réservé.
+3-3_les ressources identifiées sont réservées "en urgence" (réquisitionnées);
+3-4_le tableau de service et le planning sont mis à jour.
+4_le dossier de l'appel d'urgence est envoyé aux équipes médicales identifiées:
+4-1_si la victime est "déjà" connue, son historique médical est récupéré et envoyé aux équipes médicales;
+4-2_l'identité médicale du patient est envoyée aux équipes médicales.
+5_les équipes médicales préparent les solutions médicales au vu des dommages de la victime.
+6_la victime est admise et traitée.
+
