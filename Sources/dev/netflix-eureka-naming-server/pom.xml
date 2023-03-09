@@ -42,7 +42,6 @@
 	</dependencyManagement>
 
 	<build>
-		<finalName>netflix-eureka-naming-server</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

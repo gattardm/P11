@@ -12,7 +12,7 @@
 
 #### A faire pour le ??/03
 
-???
+:point_right:en attente du nouveau tuteur : Aurélien Pinston
 
 #### A faire avant la fin du projet
 
@@ -48,6 +48,22 @@
 :point_right:Il a été décidé en accord avec Faouzi de laisser le goal Publish > DockerHub de côté.
 
 #### Architecture
+
+**Théorie**
+
+1. Création de la structure minimale du projet avec Spring intialzr (https://start.spring.io/)
+2. Configuration du projet :
+   1. complément de l'application.properties
+   2. création des dossiers :
+      1. Controller : réceptionner la requête et fournir la réponse;
+      2. Service : exécuter les traitements métiers;
+      3. Repository : communiquer avec le source de données;
+      4. Model : contenir les objets métiers.
+3. Écriture du code avec l'utilisation des annotations Spring, dont notamment, @Entity, @Repository, @RestController
+4. Tester
+   1. écrire les tests d'intégration @SpringBootTest
+   2. écrire les tests unitaires @WebMVCTest
+5. déployer sous format jar
 
 **identification des fonctionnalités de l'API:**
 
