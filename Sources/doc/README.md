@@ -2,9 +2,9 @@
 
 #                                                            P11
 
-**==========================================================================================================================
+**==========================================================================================================================**
 
-### Semaine 10 du 06/03 au 10/03
+### Semaine 11 du 13/03 au 17/03
 
 ### entretien tuteur 07/03/2023
 
@@ -13,6 +13,14 @@
 #### A faire pour le ??/03
 
 :point_right:en attente du nouveau tuteur : Aurélien Pinston
+
+:+1: créer l'API de gestion des hôpitaux avec des hôpitaux fictifs
+
+:+1: faire des tests unitaires sur l'API de gestion
+
+:+1: créer une application web d'accès à l'API
+
+:+1: réaliser des tests d'intégration de l'appllication web
 
 #### A faire avant la fin du projet
 
@@ -167,6 +175,53 @@ utilisation de Spring Initialzr (https://start.spring.io/)
   - ex GET /users/{user_ID}/followers?sort=lastName&order=asc
   - GET /users?verified=true&firstName=Jamie
   - GET /photos?location=NYC&created_at=2018-12-31&likes_greater_than=5000
+
+**===========================================================================================================================**
+
+### Semaine 10 du 06/03 au 10/03
+
+### entretien tuteur 07/03/2023
+
+#### Travaux réalisés
+
+#### A faire pour le ??/03
+
+:point_right:en attente du nouveau tuteur : Aurélien Pinston
+
+#### A faire avant la fin du projet
+
+**:point_right: Dans le SAW :**
+
+​		:-1: renseigner le *§Critères d'acceptation* (à faire après avoir développé la solution);
+
+​		:-1: renseigner le *§Plan et calendrier* du projet d'architecture (à faire après avoir développé la solution).
+
+​		:-1: produire/renseigner les KPI et métrique tel que demandé dans le modèle de SAW fourni en intrant.
+
+​		:-1: transformer l'exemple en XML de formattage des messages en JSON.
+
+:point_right:**Dans le Plan de tests :**
+
+​		:-1: renseigner le Plan de tests/Ressources/Structure de la PoC (à faire quand l'appli sera fonctionnelle)
+
+​		:-1: Prévoir le Tests de sauvegarde dans un cadre de save/restore de données.
+
+#### Questions
+
+
+
+#### Remarques
+
+
+
+### Travail personnel
+
+
+#### A Faire
+
+:point_right:Il a été décidé en accord avec Faouzi de laisser le goal Publish > DockerHub de côté.
+
+#### Architecture
 
 **===========================================================================================================================**
 
