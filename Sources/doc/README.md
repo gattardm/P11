@@ -12,15 +12,33 @@
 
 #### A faire pour le ??/03
 
-:point_right:en attente du nouveau tuteur : Aurélien Pinston
+:point_right:en attente du nouveau tuteur : ~~Aurélien Pinston~~ Bertrand Vanautryve
 
-:+1: créer l'API de gestion des hôpitaux avec des hôpitaux fictifs
+:+1: créer l'API de gestion des hôpitaux (avec des hôpitaux fictifs)
 
-:+1: faire des tests unitaires sur l'API de gestion
+​	:+1: faire des tests unitaires sur l'API de gestion des hôpitaux
 
-:+1: créer une application web d'accès à l'API
+​	:+1: créer une application web d'accès à l'API de gestion des hôpitaux
 
-:+1: réaliser des tests d'intégration de l'appllication web
+​	:+1: réaliser des tests d'intégration de l'appllication web de gestion des hôpitaux
+
+:+1: créer l'API de gestion des opérateurs (avec des opérateurs fictifs)
+
+​	:+1: faire des tests unitaires sur l'API de gestion des opérateurs
+
+​	:+1: créer une application web d'accès à l'API de gestion des opérateurs
+
+​	:+1: réaliser des tests d'intégration de l'appllication web de gestion des opérateurs
+
+:+1: créer l'API de gestion des incidents (avec des incidents fictifs)
+
+​	:+1: faire des tests unitaires sur l'API de gestion des incidents
+
+​	:+1: créer une application web d'accès à l'API de gestion des incidents
+
+​	:+1: réaliser des tests d'intégration de l'appllication web de gestion des incidents
+
+:-1: créer le load-balancer pour faire interagir les 3 composants ci-dessus.
 
 #### A faire avant la fin du projet
 
@@ -46,7 +64,42 @@
 
 #### Remarques
 
+:point_right:La distance entre deux points d'un repère orthonormé peut être imaginée  comme la longueur de la ligne qui les relie. La formule pour calculer  cette longueur est :
+![{\sqrt  {(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/9ceb616b7d5c2c8c06a3880fa1592fd4e3e0284c).
 
+= sqrt( x`2` x`2` - 2 x`1` x`2` + x`1` x`1` + y`2` y`2` - 2 y`1` y`2` + y`1` y`1`  )
+
+= sqrt( pow(x`2`, 2) - 2.x`1`.x`2` + pow(x`1`, 2) +  pow(y`2`, 2) - 2.y`1`.y`2` +  pow(y`1`, 2)  )
+
+sqrt -> java.lang.Math.sqrt
+
+pow -> java.lang.Math.pow 
+
+:point_right: Pour la génération aléatoire des incidents, il faudra utiliser java.lang.Math.random() :
+
+Avec un calcul mathématique, on peut obtenir un nombre aléatoire compris dans les limites que l'on souhaite. La première  opération consiste à multiplier le nombre aléatoire par la différence  entre le nombre maximum et le nombre minimum (ex : 10-5=5).
+
+```
+Math.random() * ( Max - Min )
+```
+
+Avec cette opération, on obtiendra un nombre compris entre 0 et la  valeur de l'ampleur. Si on y ajoute le nombre minimum, on obtient un  nombre aléatoire compris entre la limite inférieure et la limite  supérieure.
+
+```
+Min + (Math.random() * (Max - Min))
+```
+
+La limite supérieure n'est cependant pas comprise dans l'intervalle.  Pour l'inclure, la solution la plus simple consiste à ajouter 1, puis à  enlever la partie décimale en convertissant le nombre en entier. La  formule qui en résulte est la suivante :
+
+```
+int nombreAleatoire = Min + (int)(Math.random() * ((Max - Min) + 1));
+```
+
+La méthode nextInt() de la classe Random permet de générer un entier  aléatoire compris entre 0 inclus et l'entier passé en paramètre exclus.  En ajoutant 1 et en enlevant le minimum dans l'entier en paramètre, puis en ajoutant le nombre minimum au résultat, on arrive à obtenir un  nombre aléatoire compris entre les deux valeurs:
+
+```
+Random rand = new Random(); int nombreAleatoire = rand.nextInt(max - min + 1) + min;
+```
 
 ### Travail personnel
 
