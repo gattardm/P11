@@ -43,8 +43,7 @@ body {
 
     <h2 class="h2">Ajout d'un nouvel hopital</h2>
     <div>
-        <form method="post"
-              th:action="@{/saveHospital}" th:object="${hospital}">
+        <form method="post" th:action="@{/saveHospital}" th:object="${hospital}">
             <div class="form-group">
                 <label for="nameInput">Nom</label>
                 <input
