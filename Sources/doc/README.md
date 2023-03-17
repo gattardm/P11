@@ -67,9 +67,9 @@
 :point_right:La distance entre deux points d'un repère orthonormé peut être imaginée  comme la longueur de la ligne qui les relie. La formule pour calculer  cette longueur est :
 ![{\sqrt  {(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/9ceb616b7d5c2c8c06a3880fa1592fd4e3e0284c).
 
-= sqrt( x`2` x`2` - 2 x`1` x`2` + x`1` x`1` + y`2` y`2` - 2 y`1` y`2` + y`1` y`1`  )
+= `sqrt( x2 x2 - 2 x1 x2 + x1 x1 + y2 y2 - 2 y1 y2 + y1 y1  )`
 
-= sqrt( pow(x`2`, 2) - 2.x`1`.x`2` + pow(x`1`, 2) +  pow(y`2`, 2) - 2.y`1`.y`2` +  pow(y`1`, 2)  )
+= `sqrt( pow(x2, 2) - 2.x1.x2 + pow(x1, 2) +  pow(y2, 2) - 2.y1.y2 +  pow(y1, 2)  )`
 
 sqrt -> java.lang.Math.sqrt
 
