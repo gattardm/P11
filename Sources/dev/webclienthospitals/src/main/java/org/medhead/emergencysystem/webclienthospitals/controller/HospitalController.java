@@ -23,7 +23,7 @@ public class HospitalController {
     public String home(Model model) {
         Iterable<Hospital> listHospital = service.getHospitals();
         model.addAttribute("hospitals", listHospital);
-        return "home";
+        return "homeHospitals";
     }
 
     @GetMapping("/createHospital")
@@ -33,14 +33,14 @@ public class HospitalController {
         return "formNewHospital";
     }
 
-    @GetMapping("updateHospital/{id}")
+    @GetMapping("/updateHospital/{id}")
     public String updateHospital(@PathVariable("id") final int id, Model model) {
         Hospital h = service.getHospital(id);
         model.addAttribute("hospital", h);
         return "formUpdateHospital";
     }
 
-    @GetMapping("deleteHospital/{id}")
+    @GetMapping("/deleteHospital/{id}")
     public ModelAndView deleteHospital(@PathVariable("id") final int id) {
         service.deleteHospital(id);
         return new ModelAndView("redirect:/");
@@ -48,12 +48,7 @@ public class HospitalController {
 
     @PostMapping("/saveHospital")
     public ModelAndView saveHospital(@ModelAttribute Hospital hospital) {
-        if(hospital.getId() != null) {
-            // Hospital from update form has the password field not filled
-            // so we fill it with the current password.
-            Hospital current = service.getHospital(hospital.getId());
-            hospital.setName(current.getName());
-        }
+        if(hospital.getId() != null) { Hospital current = service.getHospital(hospital.getId()); }
         service.saveHospital((hospital));
         return new ModelAndView("redirect:/");
     }

@@ -38,7 +38,13 @@
 
 ​	:+1: réaliser des tests d'intégration de l'appllication web de gestion des incidents
 
-:-1: créer le load-balancer pour faire interagir les 3 composants ci-dessus.
+:-1: créer le load-balancer/ordonnanceur pour faire interagir les 3 composants ci-dessus, selon 3 étapes:
+
+​	:-1: Intéraction entre l'ordonnanceur et l'API d'incidents
+
+​	:-1:Intéraction entre l'ordonnanceur et l'API d'oprérateurs
+
+​	:-1:Intéraction entre l'API d'opérateurs et l'API d'hôpitaux
 
 #### A faire avant la fin du projet
 

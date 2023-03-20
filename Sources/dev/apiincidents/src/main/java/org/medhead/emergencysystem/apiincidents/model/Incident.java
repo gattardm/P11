@@ -29,4 +29,7 @@ public class Incident {
 
     @Column(name = "latitude")
     private String latitude;
+
+    @Column(name = "traitement")
+    private String traitement;
 }

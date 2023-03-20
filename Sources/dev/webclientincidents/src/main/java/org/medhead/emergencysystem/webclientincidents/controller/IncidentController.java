@@ -17,13 +17,13 @@ import org.springframework.web.servlet.ModelAndView;
 public class IncidentController {
 
     @Autowired
-    private IncidentService service;
+    private IncidentService incidentService;
 
     @GetMapping("/")
     public String home(Model model) {
-        Iterable<Incident> listIncident = service.getIncidents();
+        Iterable<Incident> listIncident = incidentService.getIncidents();
         model.addAttribute("incidents", listIncident);
-        return "home";
+        return "homeIncidents";
     }
 
     @GetMapping("/createIncident")
@@ -33,23 +33,23 @@ public class IncidentController {
         return "formNewIncident";
     }
 
-    @GetMapping("updateIncident/{id}")
+    @GetMapping("/updateIncident/{id}")
     public String updateIncident(@PathVariable("id") final int id, Model model) {
-        Incident h = service.getIncident(id);
-        model.addAttribute("incident", h);
+        Incident i = incidentService.getIncident(id);
+        model.addAttribute("incident", i);
         return "formUpdateIncident";
     }
 
-    @GetMapping("deleteIncident/{id}")
+    @GetMapping("/deleteIncident/{id}")
     public ModelAndView deleteIncident(@PathVariable("id") final int id) {
-        service.deleteIncident(id);
+        incidentService.deleteIncident(id);
         return new ModelAndView("redirect:/");
     }
 
     @PostMapping("/saveIncident")
     public ModelAndView saveIncident(@ModelAttribute Incident incident) {
-        if(incident.getId() != null) { Incident current = service.getIncident(incident.getId()); }
-        service.saveIncident((incident));
+        if(incident.getId() != null) { Incident current = incidentService.getIncident(incident.getId()); }
+        incidentService.saveIncident((incident));
         return new ModelAndView("redirect:/");
     }
 }

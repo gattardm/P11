@@ -35,8 +35,8 @@ public class OperatorController {
 
     @GetMapping("updateOperator/{id}")
     public String updateOperator(@PathVariable("id") final int id, Model model) {
-        Operator h = service.getOperator(id);
-        model.addAttribute("operator", h);
+        Operator o = service.getOperator(id);
+        model.addAttribute("operator", o);
         return "formUpdateOperator";
     }
 
@@ -48,12 +48,7 @@ public class OperatorController {
 
     @PostMapping("/saveOperator")
     public ModelAndView saveOperator(@ModelAttribute Operator operator) {
-        if(operator.getId() != null) {
-            // Operator from update form has the password field not filled
-            // so we fill it with the current password.
-            Operator current = service.getOperator(operator.getId());
-            operator.setName(current.getName());
-        }
+        if(operator.getId() != null) { Operator current = service.getOperator(operator.getId()); }
         service.saveOperator((operator));
         return new ModelAndView("redirect:/");
     }

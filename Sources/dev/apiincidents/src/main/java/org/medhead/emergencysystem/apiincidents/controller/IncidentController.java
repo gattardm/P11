@@ -82,6 +82,9 @@ public class IncidentController {
             String specialityNeeded = incident.getSpecialityNeeded();
             if (specialityNeeded != null) currentIncident.setSpecialityNeeded(specialityNeeded);
 
+            String traitement = incident.getTraitement();
+            if (traitement != null) currentIncident.setTraitement(traitement);
+
             incidentService.saveIncident(currentIncident);
             return currentIncident;
         } else {
