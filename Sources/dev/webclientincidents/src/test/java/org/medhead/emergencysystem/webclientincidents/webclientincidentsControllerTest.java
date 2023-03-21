@@ -23,8 +23,8 @@ public class webclientincidentsControllerTest {
 
         mockMvc.perform(get("/"))
                 .andDo(print())
-                .andExpect(status().isOk());
-                //.andExpect(view().name("home"))
-                //.andExpect(content().string(containsString("Incident")));
+                .andExpect(status().isOk())
+                .andExpect(view().name("homeIncidents"))
+                .andExpect(content().string(containsString("Incident")));
     }
 }

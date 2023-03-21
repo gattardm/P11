@@ -3,7 +3,7 @@ package org.medhead.emergencysystem.apiordonnanceur.model;
 import lombok.Data;
 
 @Data
-public class OperatorOrd {
+public class Operator {
     private Integer id;
 
     private String name;

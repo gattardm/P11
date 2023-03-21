@@ -17,8 +17,8 @@ public class apiordonnanceurControllerTest {
     public MockMvc mockMvc;
 
     @Test
-    public void testConnexion() throws Exception {
-        mockMvc.perform(get("/incidents")).andExpect(status().isOk());
+    public void ordonnanceurTestConnexion() throws Exception {
+        mockMvc.perform(get("/")).andExpect(status().isOk());
     }
 
 }

@@ -19,7 +19,7 @@ public class OperatorProxy {
     private CustomProperties props;
 
     /**
-     * Get all employees
+     * Get all operators
      * @return An iterable of all operators
      */
     public Iterable<Operator> getOperators() {
@@ -41,7 +41,7 @@ public class OperatorProxy {
     }
 
     /**
-     * Get a operator by the id
+     * Get an operator by the id
      * @param id The id of the operator
      * @return The operator which matches the id
      */
@@ -65,7 +65,7 @@ public class OperatorProxy {
     /**
      * Add a new operator
      * @param o A new operator (without an id)
-     * @return The employee fulfilled (with an id)
+     * @return The operator fulfilled (with an id)
      */
     public Operator createOperator(Operator o) {
         String baseApiUrl = props.getApiUrl();
@@ -86,7 +86,7 @@ public class OperatorProxy {
     }
 
     /**
-     * Update a operator - using the PUT HTTP Method.
+     * Update an operator - using the PUT HTTP Method.
      * @param o Existing operator to update
      */
     public Operator updateOperator(Operator o) {
@@ -108,7 +108,7 @@ public class OperatorProxy {
     }
 
     /**
-     * Delete a operator using exchange method of RestTemplate
+     * Delete an operator using exchange method of RestTemplate
      * instead of delete method in order to log the response status code.
      * @param id The operator to delete
      */

@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS incidents;
 
-CREATE TABLE incidents(
+CREATE TABLE incidents (
   id INT AUTO_INCREMENT  PRIMARY KEY,
   type VARCHAR(250) NOT NULL,
   specialityneeded VARCHAR(250) NOT NULL,

@@ -5,6 +5,7 @@ import org.medhead.emergencysystem.apiordonnanceur.model.Incident;
 import org.medhead.emergencysystem.apiordonnanceur.CustomProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
@@ -17,7 +18,6 @@ public class IncidentProxy {
     @Autowired
     private CustomProperties props;
 
-
     /**
      * Get all incidents
      * @return An iterable of all incidents
@@ -26,6 +26,7 @@ public class IncidentProxy {
 
         String baseApiUrlIncidents = props.getApiUrlIncidents();
         String getIncidentsUrl = baseApiUrlIncidents + "/incidents";
+
 
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<Iterable<Incident>> response = restTemplate.exchange(
@@ -59,6 +60,28 @@ public class IncidentProxy {
         );
 
         log.debug("Get Incident call " + response.getStatusCode().toString());
+
+        return response.getBody();
+    }
+
+    /**
+     * Update an incident - using the PUT HTTP Method.
+     * @param i Existing incident to update
+     */
+    public Incident updateIncident(Incident i) {
+        String baseApiUrlIncidents = props.getApiUrlIncidents();
+        String updateIncidentUrl = baseApiUrlIncidents + "/incident/" + i.getId();
+
+        RestTemplate restTemplate = new RestTemplate();
+        HttpEntity<Incident> request = new HttpEntity<Incident>(i);
+        ResponseEntity<Incident> response = restTemplate.exchange(
+                updateIncidentUrl,
+                HttpMethod.PUT,
+                request,
+                Incident.class
+        );
+
+        log.debug("Update Incident call " + response.getStatusCode().toString());
 
         return response.getBody();
     }

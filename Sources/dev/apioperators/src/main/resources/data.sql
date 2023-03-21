@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS operators;
 
-CREATE TABLE operators(
+CREATE TABLE operators (
   id INT AUTO_INCREMENT  PRIMARY KEY,
   name VARCHAR(250) NOT NULL,
   available VARCHAR(5) NOT NULL

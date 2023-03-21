@@ -1,12 +1,10 @@
 package org.medhead.emergencysystem.apioperators.service;
 
 import lombok.Data;
-import org.medhead.emergencysystem.apioperators.repository.OperatorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import org.medhead.emergencysystem.apioperators.model.Operator;
 import org.medhead.emergencysystem.apioperators.repository.OperatorRepository;
+import org.medhead.emergencysystem.apioperators.model.Operator;
 
 import java.util.Optional;
 
