@@ -75,6 +75,12 @@ public class OperatorController {
             String available = operator.getAvailable();
             if (available != null) currentOperator.setAvailable(available);
 
+            String incidentId = operator.getIncidentId();
+            if (incidentId != null) currentOperator.setIncidentId(incidentId);
+
+            String hospitalId = operator.getHospitalId();
+            if (hospitalId != null) currentOperator.setHospitalId(hospitalId);
+
             operatorService.saveOperator(currentOperator);
             return currentOperator;
         } else {

@@ -22,4 +22,10 @@ public class Operator {
 
     @Column(name="available")
     private String available;
+
+    @Column(name = "incidentid")
+    private String incidentId;
+
+    @Column(name = "hospitalid")
+    private String hospitalId;
 }

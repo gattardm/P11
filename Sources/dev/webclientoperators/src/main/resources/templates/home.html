@@ -36,7 +36,9 @@
             <thead>
             <tr>
                 <th>Nom</th>
-                <th>Disponible</th>
+                <th>Disponibilité</th>
+                <th>Incident attribué</th>
+                <th>Hopital identifié</th>
             </tr>
             </thead>
             <tbody>
@@ -46,6 +48,8 @@
             <tr th:each="operator: ${operators}">
                 <td><span th:text="${operator.name}"> Nom </span></td>
                 <td><span th:text="${operator.available}"> disponible </span></td>
+                <td><span th:text="${operator.incidentId}"> Incident attribué </span></td>
+                <td><span th:text="${operator.hospitalId}"> Hopital identifié </span></td>
                 <td>
                     <a th:href="@{/updateOperator/{id}(id=${operator.id})}"><button class="btn btn-info">Modifier</button></a>
                     <a th:href="@{/deleteOperator/{id}(id=${operator.id})}"><button class="btn btn-danger">Supprimer</button></a>
@@ -56,6 +60,7 @@
     </div>
     <h4><a th:href="@{/createOperator}">Ajouter un nouvel opérateur</a></h4>
 </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>

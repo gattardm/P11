@@ -36,4 +36,9 @@ public class Hospital {
     @Column(name = "speciality")
     private String speciality;
 
+    @Column(name = "incidentid")
+    private String incidentId;
+
+    @Column(name = "attributedby")
+    private String attributedBy;
 }

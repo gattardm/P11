@@ -18,15 +18,15 @@ créer le load-balancer/ordonnanceur pour faire interagir les 3 composants, selo
 * 1.1 l'ordonnanceur identifie l'incident en cours de traitement (traitement à "En cours")
 * 1.2 l'ordonnanceur cherche un opérateur disponible et va patienter tant qu'il n'y en aura pas de disponible
 * 1.3 l'ordonnanceur attribue l'incident à l'opérateur "disponible"
-* 1.4 l'opérateur prend en charge l'incident en devenant "Non disponible"
-* 1.5 boucle sur l'étape 1.1
+* 1.4 boucle sur l'étape 1.1
 
 * 2 Actions des opérateurs :
-* 2.1 l'opérateur va chercher un hopital correspondant aux critères de l'incident (critères de spécialité médicale, localisation, lits disponibles)
-* 2.2 l'opérateur va attribuer l'incident à l'hopital adéquat
-* 2.3 l'opérateur identifie l'incident comme traité (traitement à "true")
-* 2.4 l'opérateur se remet au statut "Disponible"
-* 2.5 boucle sur l'étape 2.1
+* 2.1 l'opérateur prend en charge l'incident en devenant "Non disponible"
+* 2.2 l'opérateur va chercher un hopital correspondant aux critères de l'incident (critères de spécialité médicale, localisation, lits disponibles)
+* 2.3 l'opérateur va attribuer l'incident à l'hopital adéquat
+* 2.4 l'opérateur identifie l'incident comme traité (traitement à "true")
+* 2.5 l'opérateur se remet au statut "Disponible"
+* 2.6 boucle sur l'étape 2.1
 
 * 3 Actions des hôpitaux :
 * 3.1 l'hôpital prend en charge l'incident

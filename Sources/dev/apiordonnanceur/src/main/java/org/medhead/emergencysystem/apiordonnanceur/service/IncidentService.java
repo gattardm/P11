@@ -42,7 +42,6 @@ public class IncidentService {
         System.out.println("modification false --> En cours");
         incident.setTraitement("En cours");
         this.saveIncident(incident);
-
         return incident;
     }
 

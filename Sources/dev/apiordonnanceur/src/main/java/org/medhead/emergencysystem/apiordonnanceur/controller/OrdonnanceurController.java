@@ -24,12 +24,33 @@ public class OrdonnanceurController {
 
     @GetMapping("/")
     public String home(Model model) throws InterruptedException {
-       Iterable<Incident> listIncidents = incidentService.treatedIncidents();
-       Iterable<Operator> listOperators = operatorService.treatedOperators();
-//        Iterable<Operator> listOperators = operatorService.getOperators();
+        Iterable<Incident> listIncidents = incidentService.getIncidents();
 
+        for ( Incident i : listIncidents) {
+            if (i.getTraitement().contains("false")) {
+                //Passage de l'incident du statut "Non traité" au statut "En cours"
+                incidentService.treatedInProgressIncident(i);
+
+                //Attente d'un opérateur disponible
+                Operator operator = null;
+                while(operator == null) { operator = operatorService.lookForFreeOperator(); }
+
+                //Attribution de l'incident à l'opérateur disponible
+                operatorService.attributedIncident(operator, i);
+
+                //Déclaration de l'opérateur comme "Non disponible"
+                operatorService.busyOperator(operator);
+            }
+        }
+
+        //Mise à jour des listes
+        listIncidents = incidentService.getIncidents();
+        Iterable<Operator> listOperators = operatorService.getOperators();
+
+        //Ajout des attributs pour l'affichage HTML
         model.addAttribute("incidents", listIncidents);
         model.addAttribute("operators", listOperators);
+
         return "home";
     }
 

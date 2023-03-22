@@ -10,7 +10,9 @@ import lombok.Data;
 @ConfigurationProperties(prefix="org.medhead.emergencysystem.webclientoperators")
 public class CustomProperties {
 
-    private String apiUrl;
+    private String apiUrlOperators;
+    private String apiUrlIncidents;
+    private String apiUrlHospitals;
 
 }
 

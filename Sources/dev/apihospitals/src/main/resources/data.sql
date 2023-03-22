@@ -7,11 +7,13 @@ CREATE TABLE hospitals(
   latitude VARCHAR(10) NOT NULL,
   bedsquantity VARCHAR(5) NOT NULL,
   bedsavailable VARCHAR(5) NOT NULL,
-  speciality VARCHAR(250) NOT NULL
+  speciality VARCHAR(250) NOT NULL,
+  incidentid VARCHAR(5),
+  attributedby  VARCHAR(5)
 );
 
-INSERT INTO hospitals (name, longitude, latitude, bedsquantity, bedsavailable, speciality) VALUES
-  ('Hopital 1', '-10', '10', '1000', '100', 'Anaesthetics'),
-  ('Hopital 2', '10', '10',  '2000', '200', 'Intensive care medicine'),
-  ('Hopital 3', '10', '-10',  '3000', '300', 'Additional dental specialities'),
-  ('Hopital 4', '-10', '-10',  '4000', '400', 'Oral and maxillofacial surgery');
+INSERT INTO hospitals (name, longitude, latitude, bedsquantity, bedsavailable, speciality, incidentid, attributedby) VALUES
+  ('Hopital 1', '-10', '10', '1000', '100', 'Anaesthetics', 'n/a', 'n/a'),
+  ('Hopital 2', '10', '10',  '2000', '200', 'Intensive care medicine', 'n/a', 'n/a'),
+  ('Hopital 3', '10', '-10',  '3000', '300', 'Additional dental specialities', 'n/a', 'n/a'),
+  ('Hopital 4', '-10', '-10',  '4000', '400', 'Oral and maxillofacial surgery', 'n/a', 'n/a');

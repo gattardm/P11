@@ -1,4 +1,4 @@
-package org.medhead.emergencysystem.webclienthospitals.model;
+package org.medhead.emergencysystem.webclientoperators.model;
 
 import lombok.Data;
 

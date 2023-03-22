@@ -1,5 +1,6 @@
 package org.medhead.emergencysystem.apiordonnanceur.service;
 
+import org.medhead.emergencysystem.apiordonnanceur.model.Incident;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,33 +26,27 @@ public class OperatorService {
         return savedOperator;
     }
 
-    public Iterable<Operator> treatedOperators() {
+    public Operator attributedIncident(Operator operator, Incident i) {
+        System.out.println("L'incident " + i.getId() + " est attribué à l'opérateur " + operator.getId());
+        operator.setIncidentId(i.getId().toString());
+        this.saveOperator(operator);
+        return operator;
+    }
+
+    public Operator lookForFreeOperator() {
         Iterable<Operator> listOperators = operatorProxy.getOperators();
         for (Operator o : listOperators) {
-            if (o.getAvailable().contains("true")) {
-                this.busyOperator(o);
-                continue;
-            } ;
+            if(o.getAvailable().compareTo("true")==0) {
+                System.out.println("L'opérateur " + o.getId() + " est disponible");
+                return o; }
         }
-        return  operatorProxy.getOperators();
+        return null;
     }
 
     public Operator busyOperator(Operator operator) {
-        System.out.println("avant : "+ operator.getName() + operator.getAvailable());
-        System.out.println("modification true --> false");
+        System.out.println("L'opérateur " + operator.getId() + " est maintenant OCCUPE");
         operator.setAvailable("false");
         this.saveOperator(operator);
-
         return operator;
     }
-
-    public Operator freeOperator(Operator operator) {
-        System.out.println("avant : "+ operator.getName() + operator.getAvailable());
-        System.out.println("modification false --> true");
-        operator.setAvailable("true");
-        this.saveOperator(operator);
-
-        return operator;
-    }
-
 }

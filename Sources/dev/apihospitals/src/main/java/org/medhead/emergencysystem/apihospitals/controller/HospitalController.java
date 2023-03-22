@@ -88,6 +88,12 @@ public class HospitalController {
             String speciality = hospital.getSpeciality();
             if (speciality != null) currentHospital.setSpeciality(speciality);
 
+            String incidentId = hospital.getIncidentId();
+            if (incidentId != null) currentHospital.setIncidentId(incidentId);
+
+            String attributedBy = hospital.getAttributedBy();
+            if (attributedBy != null) currentHospital.setAttributedBy(attributedBy);
+
             hospitalService.saveHospital(currentHospital);
             return currentHospital;
         } else {

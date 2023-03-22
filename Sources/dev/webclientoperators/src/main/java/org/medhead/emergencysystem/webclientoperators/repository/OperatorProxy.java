@@ -24,8 +24,8 @@ public class OperatorProxy {
      */
     public Iterable<Operator> getOperators() {
 
-        String baseApiUrl = props.getApiUrl();
-        String getOperatorsUrl = baseApiUrl + "/operators";
+        String baseApiUrlOperators = props.getApiUrlOperators();
+        String getOperatorsUrl = baseApiUrlOperators + "/operators";
 
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<Iterable<Operator>> response = restTemplate.exchange(
@@ -46,8 +46,8 @@ public class OperatorProxy {
      * @return The operator which matches the id
      */
     public Operator getOperator(int id) {
-        String baseApiUrl = props.getApiUrl();
-        String getOperatorUrl = baseApiUrl + "/operator/" +id;
+        String baseApiUrlOperators = props.getApiUrlOperators();
+        String getOperatorUrl = baseApiUrlOperators + "/operator/" +id;
 
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<Operator> response = restTemplate.exchange(
@@ -68,8 +68,8 @@ public class OperatorProxy {
      * @return The operator fulfilled (with an id)
      */
     public Operator createOperator(Operator o) {
-        String baseApiUrl = props.getApiUrl();
-        String createOperatorUrl = baseApiUrl + "/operator";
+        String baseApiUrlOperators = props.getApiUrlOperators();
+        String createOperatorUrl = baseApiUrlOperators + "/operator";
 
         RestTemplate restTemplate = new RestTemplate();
         HttpEntity<Operator> request = new HttpEntity<Operator>(o);
@@ -90,8 +90,8 @@ public class OperatorProxy {
      * @param o Existing operator to update
      */
     public Operator updateOperator(Operator o) {
-        String baseApiUrl = props.getApiUrl();
-        String updateOperatorUrl = baseApiUrl + "/operator/" + o.getId();
+        String baseApiUrlOperators = props.getApiUrlOperators();
+        String updateOperatorUrl = baseApiUrlOperators + "/operator/" + o.getId();
 
         RestTemplate restTemplate = new RestTemplate();
         HttpEntity<Operator> request = new HttpEntity<Operator>(o);
@@ -113,8 +113,8 @@ public class OperatorProxy {
      * @param id The operator to delete
      */
     public void deleteOperator(int id) {
-        String baseApiUrl = props.getApiUrl();
-        String deleteOperatorUrl = baseApiUrl + "/operator/" + id;
+        String baseApiUrlOperators = props.getApiUrlOperators();
+        String deleteOperatorUrl = baseApiUrlOperators + "/operator/" + id;
 
         RestTemplate restTemplate =new RestTemplate();
         ResponseEntity<Void> response = restTemplate.exchange(

@@ -9,4 +9,8 @@ public class Operator {
     private String name;
 
     private String available;
+
+    private String incidentId;
+
+    private String hospitalId;
 }

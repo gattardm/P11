@@ -36,4 +36,12 @@ public class OperatorService {
 
         return savedOperator;
     }
+
+    public Operator freeOperator(Operator operator) {
+        System.out.println("L'opérateur " + operator.getId() + " est désormais DISPONIBLE");
+        operator.setAvailable("true");
+        this.saveOperator(operator);
+        return operator;
+    }
+
 }
