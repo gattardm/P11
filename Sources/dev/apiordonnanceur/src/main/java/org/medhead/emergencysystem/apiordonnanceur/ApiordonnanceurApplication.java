@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApiordonnanceurApplication implements CommandLineRunner {
+public class ApiordonnanceurApplication  {
 
 	@Autowired
 	private CustomProperties props;
@@ -15,9 +15,4 @@ public class ApiordonnanceurApplication implements CommandLineRunner {
 		SpringApplication.run(ApiordonnanceurApplication.class, args);
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
-		System.out.println(props.getApiUrlIncidents());
-		System.out.println(props.getApiUrlOperators());
-	}
 }

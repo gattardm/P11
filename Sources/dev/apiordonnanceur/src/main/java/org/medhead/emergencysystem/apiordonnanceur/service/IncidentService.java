@@ -38,8 +38,8 @@ public class IncidentService {
     }
 
     public Incident treatedInProgressIncident(Incident incident) {
-        System.out.println("avant : " + incident.toString());
-        System.out.println("modification false --> En cours");
+        System.out.println("=======================================\nTraitement de l'incident  : " + incident.getId());
+        System.out.println("\tmodification de l'état de l'incident '" + incident.getTraitement() +"' à 'En cours'");
         incident.setTraitement("En cours");
         this.saveIncident(incident);
         return incident;

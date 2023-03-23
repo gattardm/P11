@@ -36,6 +36,7 @@ public class IncidentProxy {
                 new ParameterizedTypeReference<Iterable<Incident>>() {}
         );
 
+
         log.debug(("Get Incidents call " + response.getStatusCode().toString()));
 
         return response.getBody();

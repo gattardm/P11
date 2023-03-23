@@ -45,8 +45,10 @@ public class OperatorController {
                     hospital = hospitalService.lookForHospital(incident);
                 }
 
-                //Attribution de l'incident à l'hopital adéquat
+                //Attribution de l'incident à l'hopital adéquat par l'opérateur
                 hospitalService.attributedIncident(hospital, incident);
+                hospitalService.attributedOperator(hospital, operator);
+                operatorService.attributedHospital(hospital, operator);
 
                 //Passage d'un incident du statut "En cours" au statut "Traité"
                 incidentService.treatedIncident(incident);

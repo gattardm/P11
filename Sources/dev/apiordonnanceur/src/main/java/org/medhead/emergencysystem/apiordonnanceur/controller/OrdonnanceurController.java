@@ -26,17 +26,17 @@ public class OrdonnanceurController {
     public String home(Model model) throws InterruptedException {
         Iterable<Incident> listIncidents = incidentService.getIncidents();
 
-        for ( Incident i : listIncidents) {
-            if (i.getTraitement().contains("false")) {
+        for ( Incident incident : listIncidents) {
+            if (incident.getTraitement().contains("false")) {
                 //Passage de l'incident du statut "Non traité" au statut "En cours"
-                incidentService.treatedInProgressIncident(i);
+                incidentService.treatedInProgressIncident(incident);
 
                 //Attente d'un opérateur disponible
                 Operator operator = null;
                 while(operator == null) { operator = operatorService.lookForFreeOperator(); }
 
                 //Attribution de l'incident à l'opérateur disponible
-                operatorService.attributedIncident(operator, i);
+                operatorService.attributedIncident(operator, incident);
 
                 //Déclaration de l'opérateur comme "Non disponible"
                 operatorService.busyOperator(operator);

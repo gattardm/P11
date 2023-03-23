@@ -27,7 +27,7 @@ public class OperatorService {
     }
 
     public Operator attributedIncident(Operator operator, Incident i) {
-        System.out.println("L'incident " + i.getId() + " est attribué à l'opérateur " + operator.getId());
+        System.out.println("\tAttribution de l'incident " + i.getId() + " à l'opérateur " + operator.getId());
         operator.setIncidentId(i.getId().toString());
         this.saveOperator(operator);
         return operator;
@@ -37,14 +37,15 @@ public class OperatorService {
         Iterable<Operator> listOperators = operatorProxy.getOperators();
         for (Operator o : listOperators) {
             if(o.getAvailable().compareTo("true")==0) {
-                System.out.println("L'opérateur " + o.getId() + " est disponible");
+                System.out.println("\tRecherche d'une opérateur disponible");
+                System.out.println("\tL'opérateur " + o.getId() + " est disponible");
                 return o; }
         }
         return null;
     }
 
     public Operator busyOperator(Operator operator) {
-        System.out.println("L'opérateur " + operator.getId() + " est maintenant OCCUPE");
+        System.out.println("\tL'opérateur " + operator.getId() + " est maintenant OCCUPE");
         operator.setAvailable("false");
         this.saveOperator(operator);
         return operator;

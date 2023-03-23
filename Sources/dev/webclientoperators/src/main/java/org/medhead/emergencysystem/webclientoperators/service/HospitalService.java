@@ -1,6 +1,7 @@
 package org.medhead.emergencysystem.webclientoperators.service;
 
 import org.medhead.emergencysystem.webclientoperators.model.Incident;
+import org.medhead.emergencysystem.webclientoperators.model.Operator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,11 +40,11 @@ public class HospitalService {
     }
 
     public Hospital lookForHospital(Incident incident) {
-        System.out.println("L'incident " + incident.getId() + " nécessite des soins de " + incident.getSpecialityNeeded());
+        System.out.println("=================================================\n\tL'incident '" + incident.getId() + "' nécessite des soins de '" + incident.getSpecialityNeeded() + "'");
         Iterable<Hospital> hospitals = hospitalProxy.getHospitals();
         for (Hospital hospital : hospitals) {
             if (hospital.getSpeciality().contains(incident.getSpecialityNeeded())) {
-                System.out.println("L'hopital choisi est " + hospital.getId());
+                System.out.println("\tL'hopital choisi est '" + hospital.getId()+ "' car il dispose d'une spécialité médicale de '" + hospital.getSpeciality() + "'");
                 return hospital;
             }
         }
@@ -51,8 +52,15 @@ public class HospitalService {
     }
 
     public Hospital attributedIncident(Hospital hospital, Incident incident) {
-        System.out.println("L'incident " + incident.getId() + " est attribué à l'hopital " + hospital.getId());
+        System.out.println("\tL'incident '" + incident.getId() + "' est attribué à '" + hospital.getName() + "'");
         hospital.setIncidentId(incident.getId().toString());
+        this.saveHospital(hospital);
+        return hospital;
+    }
+
+    public Hospital attributedOperator(Hospital hospital, Operator operator) {
+        System.out.println("\tL'incident '" + operator.getIncidentId() + "' a été traité par '" + operator.getName() + "'");
+        hospital.setAttributedBy(operator.getId().toString());
         this.saveHospital(hospital);
         return hospital;
     }
