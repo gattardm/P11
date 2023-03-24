@@ -13,7 +13,12 @@ echo -------------------------------------------
 echo Starting Incidents API
 echo processing...
 docker run -d -p 8585:8585 solarhis/apiincidents 
-echo Web Client API Hospitals started
+echo API Incidents started
+echo -------------------------------------------
+echo Starting Web Client Incidents API
+echo processing...
+docker run -d -p 8686:8686 solarhis/webclientapiincidents 
+echo Web Client API Incidents started
 echo -------------------------------------------
 echo ===========================================
 echo +++++++++++++++++++++++++++++++++++++++++++
