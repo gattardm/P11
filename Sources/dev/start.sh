@@ -25,6 +25,11 @@ echo processing...
 docker run -d -p 8383:8383 solarhis/apioperators
 echo API Incidents started
 echo -------------------------------------------
+echo Starting Web Client Operators API
+echo processing...
+docker run -d -p 8484:8484 solarhis/webclientapioperators 
+echo Web Client API Operators  started
+echo -------------------------------------------
 echo ===========================================
 echo +++++++++++++++++++++++++++++++++++++++++++
 echo SUMMARY
