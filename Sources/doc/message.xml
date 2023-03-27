@@ -1,0 +1,46 @@
+{
+	"Header" : [
+		"IntervetionDUrgence": {
+			"mtfid" : "UDI",
+			"xmlns:xs" : "urn:nato:mtf:app-11(d):1:aco"
+		},
+		"MessageIdentifier" [
+			{ "MessageTextFormatIdentifier" : "UDI" },
+			{ "Standard" : "APP-11(D)" },
+			{ "Version" : "1" },
+			{ "Originator" : "STATION MOBILE INTERVENTION" },
+			{ "ReferenceTimeOfPublication" : [
+				"DateTimeIso" : [
+					{ "Year4Digit" : "2023" },
+					{ "MonthNumeric" : "01" },
+					{ "TimeDelimiter" : "T" },
+					{ "HourTime" : "10" },
+					{ "MinuteTime" : "30" },
+					{ "SecondTime" : "30" },
+					{ "TimeZone" : "Z" }
+				]
+			{
+		] ,
+		{ "Qualifier" : "URG" },
+		{ "SerialNumberOfQualifier" : "1" },
+		{ "MessageSecurityPolice" : "GPOGlobal" },
+		{ "MessageClassification" [
+			{ "SecurityClassification" : "PROTECT" }
+		] },
+		{ "MessageSecurityCategory" : "MEDICAL" }
+	],
+	"Body" : [
+		"OperationCodeWord" : [
+			{ "PlanOriginatorAndNumber" [
+				{ "PlanOriginator" : "SACEUR" },
+				{ "BlanckSpaceCharacter" : " " },
+				{ "PlanNumber" : "106" }
+			] },
+			{ "OptionNickname" : "PAPER WASTE" },
+			{ "SecondaryOptionNickname" : "ORANGE" },
+			{ "description" : "Chute du 4ème étage" },
+			{ "supported" : "SAMU" },
+			{ "Conveyance" : " Hélicoptère" }
+		]
+	]
+}

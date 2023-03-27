@@ -30,6 +30,11 @@ echo processing...
 docker run -d -p 8484:8484 solarhis/webclientapioperators 
 echo Web Client API Operators  started
 echo -------------------------------------------
+echo Starting Ordonnanceur API
+echo processing...
+docker run -d -p 8888:8888 solarhis/apiordonnanceur
+echo API Ordonnanceur started
+echo ===========================================
 echo ===========================================
 echo +++++++++++++++++++++++++++++++++++++++++++
 echo SUMMARY
