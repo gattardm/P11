@@ -21,19 +21,18 @@
 
 **:point_right: Dans le SAW :**
 
-​		:-1: renseigner le *§Critères d'acceptation* (à faire après avoir développé la solution);
+​		:+1: renseigner le *§Critères d'acceptation* (à faire après avoir développé la solution);
 
-​		:-1: renseigner le *§Plan et calendrier* du projet d'architecture (à faire après avoir développé la solution).
+​		:+1: renseigner le *§Plan et calendrier* du projet d'architecture (à faire après avoir développé la solution).
 
-​		:-1: produire/renseigner les KPI et métrique tel que demandé dans le modèle de SAW fourni en intrant.
+​		:+1: produire/renseigner les KPI et métrique tel que demandé dans le modèle de SAW fourni en intrant.
 
 ​		:+1: transformer l'exemple en XML de formattage des messages en JSON.
 
 :point_right:**Dans le Plan de tests :**
 
-​		:-1: renseigner le Plan de tests/Ressources/Structure de la PoC (à faire quand l'appli sera fonctionnelle)
+​		:+1: renseigner le Plan de tests/Ressources/Structure de la PoC (à faire quand l'appli sera fonctionnelle)
 
-​		:-1: Prévoir le Tests de sauvegarde dans un cadre de save/restore de données.
 
 #### Questions
 
