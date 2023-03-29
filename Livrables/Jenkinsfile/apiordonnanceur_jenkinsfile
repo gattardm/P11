@@ -1,0 +1,30 @@
+pipeline {
+  agent any
+  stages {
+    stage('Checkout Scm') {
+      steps {
+        git 'https://github.com/gattardm/apiordonnaceur.git'
+      }
+    }
+
+    stage('Maven Build 0') {
+      steps {
+        sh 'mvn clean install'
+      }
+    }
+
+    stage('No Converter-0') {
+      steps {
+        echo 'No converter for Builder: com.cloudbees.dockerpublish.DockerBuilder'
+      }
+    }
+
+  }
+  tools {
+    maven 'maven'
+    jdk 'jdk'
+  }
+  triggers {
+    pollSCM('* * * * *')
+  }
+}

@@ -1,0 +1,56 @@
+Diapo 2 :
+	Bonjour, je m'appelle Gérald ATTARD et aujourd'hui je vais vous présenter le projet de preuve de concept du système de gestion des messages d'urgence élaboré pour le compte du Consortium MedHead.
+Diapo 3:
+	Alors, j'articulerai cette présentation autour de 3 axes:
+		_tout d'abord, je vous présenterai les livrables que j'ai produits pour réaliser cette Preuve de Concept, cette PoC;
+		_puis, je vous présenterai le pipeline CI/CD que j'ai monté pour effectuer son développement
+		_et enfin je vous ferai une démonstration de celle-ci.
+		...mais avant de rentrer dans le vif du sujet, je souhaiterais faire une rapide introduction liminaire pour vous présenter le contexte global du projet...
+Diapo 4 :
+	Encart 1 :
+	Alors, le consoriutm MedHead est un regroupement de grandes institutions médicales oeuvrant au sein du système de santé britannique...
+	Encart 2 :
+	...qui a pour objectif de...
+		Image 1 :
+			...mettre en commun leurs ressources médicales respectives...
+		Image 2 :
+			...afin d'améliorer les soins apportés à leurs patients. Pour réaliser cet objectif global, le consortium a défini une liste des points à prendre en compte pour atteinre ses objectifs...
+	Encart 3 :
+		Image 1 :
+			...et un de ces points est relatif à la prise en charge des messages d'urgence...
+		Image 2 :
+			...pour que les ambulances transportant les patients...
+		Image 3 :
+			...soient dirigées vers les hôpitaux adéquats. Et donc le Consortium m'a donc confié le projet de développer une preuve de concept, une PoC, pour ce système de gestion des messages d'urgence.
+	Encart 4 :
+	Pour réaliser ceci, je me suis basé sur un ensemble de documents existants, dont:
+		Image 1 :
+			...un document d'hypothèse de travail,
+		Image 2 :
+			...un Document de Définition d'Architecture...
+		Image 3 :
+			...la feuille de route globale du projet mise en commun des ressources du Consortium.
+	Encart 5 :
+			...et à partir de ces ressources, j'ai tout d'abord...
+		Image 1 :
+			...monté un pipeline CI/CD pour automatiser et surveiller la production de l'ensemble des composants logiciels qui seront nécessaires ...
+		Image 2 :
+			...pour développer concrètement la PoC.
+		Avant de vous présenter le pipeline CI/CD et de vous faire une démonstration de cette PoC, je vais, dans un premier temps, vous présenter les livrables documentaires que j'ai produits et j'espère qu'à travers leurs présentations, vous appréhenderez la méthode que j'ai utilisée pour réaliser concrètement la PoC, et aussi la méthode que j'entrevois pour la suite du projet.
+
+Diapo 7
+	Au sein de ce livrable, j'ai notamment abordé 6 parties essentielles:
+	Image 1 :
+		...tout d'abord, j'ai présenté le contexte d'ensemble au sein duquel cette PoC devra s'insérer...
+	Image 2 :
+		...puis j'ai présenté la vue d'ensemble de la vision architecturale, dont notamment l'architecture de base et différents domaines nécessaires à l'implémentation de la PoC...
+	Image 3 :
+		...j'ai ensuite présenté les différentes parties prenantes du projet, en y spécifiant, leur rôle, leur responsabilités et les livrables qui faudra leur fournir durant tout le déroulé du projet...
+	Image 4 :
+		...en 4ème point notable, j'ai présenté les différentes procédures d'acceptation et leurs critères associés nécessaires à la bonne réalisation de cette PoC...
+	Image 5 :
+		...puis 
+
+
+
+

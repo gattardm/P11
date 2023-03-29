@@ -11,7 +11,7 @@
 
 #### A faire pour le 27/03
 
-:-1:finir la documentation technique
+:+1:finir la documentation technique
 
 :-1:réaliser la présentation 
 
@@ -35,7 +35,7 @@
 
 
 #### Questions
-
+Dans l'énoncé des livrables à produire, il est demandé une hypothèse de validation de principe complète avec méthodologie et résultats. Je ne comprends pas bien en quoi consiste ce document, pourrais-tu m'éclairer, stp?
 
 
 #### Remarques

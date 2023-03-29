@@ -25,7 +25,6 @@ pipeline {
     jdk 'jdk'
   }
   triggers {
-    upstream(upstreamProjects: 'webclient API Operators', threshold: hudson.model.Result.SUCCESS)
     pollSCM('* * * * *')
   }
 }

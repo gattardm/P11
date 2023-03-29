@@ -25,7 +25,6 @@ pipeline {
     jdk 'jdk'
   }
   triggers {
-    upstream(upstreamProjects: 'API Hospitals', threshold: hudson.model.Result.SUCCESS)
     pollSCM('* * * * *')
   }
 }
