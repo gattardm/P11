@@ -1,0 +1,23 @@
+Rapports d'exécution d'essai du prototype :
+https://github.com/gattardm/P11/tree/main/Sources/doc/executionLogs
+
+Rapports d'exécution des builds du pipeline CI/CD:
+https://github.com/gattardm/P11/tree/main/Sources/doc/consoleOutput
+
+Configuration du pipeline CI/CD Jenkins:
+https://github.com/gattardm/P11/tree/main/Sources/doc/Jenkinsfile
+
+Description du pipeline CI/CD Jenkins:
+https://github.com/gattardm/P11/blob/main/Livrables/SBB_pipelineCICD.pdf
+
+Scénarios BDD définissant les tests d'acceptation :
+https://github.com/gattardm/P11/blob/main/Livrables/Plan_de_tests.pdf
+
+
+
+
+
+
+
+
+
