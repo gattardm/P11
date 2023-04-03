@@ -1,0 +1,15 @@
+
+sudo mkdir /etc/systemd/system/docker.service.d
+sudo vi /etc/systemd/system/docker.service.d/override.conf
+sudo systemctl edit docker.service (et copier coller l'intégralité du fichier)
+sudo mkdir /etc/systemd/system/docker.service.d
+sudo vi /etc/systemd/system/docker.service.d/override.conf
+(coller l'intégralité du fichier edit docker.service)
+uncomment [Service]
+ExecStart=
+ExecStart=/usr/bin/dockerd -H fd:// -H tcp://127.0.0.1:2376 --containerd=/run/containerd/containerd.sock
+:x!
+sudo systemctl daemon-reload
+sudo systemctl restart docker.service
+sudo netstat -lntp | grep dockerd
+
