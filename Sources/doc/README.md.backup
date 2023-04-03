@@ -6,6 +6,15 @@
 ### Semaine 13 du 27/03 au 31/03
 
 ### entretien tuteur 27/03/2023
+* Ajout de l'énoncé du TOGAF
+* Ajout d'une conclusion relative à la POC elle-même
+	* les composants sont indépendants les uns des autres
+	* les composants se connectent bien aux différentes bases de données
+	* les bases de données sont sécurisées
+	* les retours des bases de données sont authentiques
+	* les temps de réponses des requêtes n'excèdent pas les exigences du cahier des charges (30s)	
+* Ajout d'un travail par itération pour apport de valeurs --> Agile / Scrum
+* Anticipation des pb grace aux itérations
 
 #### Travaux réalisés
 
@@ -35,7 +44,7 @@
 
 
 #### Questions
-Dans l'énoncé des livrables à produire, il est demandé une hypothèse de validation de principe compl__te avec méthodol
+Dans l'énoncé des livrables à produire, il est demandé une hypothèse de validation de principe complète avec méthodologie et résultats. Je ne comprends pas bien en quoi consiste ce document, pourrais-tu m'éclairer, stp?
 
 
 #### Remarques
